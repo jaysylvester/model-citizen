@@ -1,0 +1,22 @@
+<section class="form">
+  {{#if error}}
+    <p class="error">{{error}}</p>
+  {{/if}}
+  <form action="/form-demo/action/submit" method="post">
+    <ul class="data">
+      <li>
+        <label for="first-name">First name</label>
+        <input type="text" name="first_name" id="first-name" value="{{form.first_name}}">
+      </li>
+      <li>
+        <label for="last-name">Last name</label>
+        <input type="text" name="last_name" id="last-name" value="{{form.last_name}}">
+      </li>
+    </ul>
+    <ul class="actions">
+      <li class="primary-action">
+        <input type="submit" value="Submit">
+      </li>
+    </ul>
+  </form>
+</section>

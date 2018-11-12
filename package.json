@@ -1,0 +1,35 @@
+{
+  "name": "model-citizen",
+  "version": "0.0.1",
+  "description": "A responsive web site template built with citizen",
+  "author": {
+    "name": "Jay Sylvester",
+    "email": "jay@jaysylvester.com",
+    "url": "http://jaysylvester.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaysylvester/model-citizen"
+  },
+  "main": "index",
+  "dependencies": {
+    "citizen": "^0.8.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "*",
+    "cssnano": "*",
+    "gulp": "^4.0.0",
+    "gulp-concat": "*",
+    "gulp-cssnano": "*",
+    "gulp-filter": "*",
+    "gulp-livereload": "*",
+    "gulp-postcss": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify-es": "*",
+    "gulp-watch": "*"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  }
+}
