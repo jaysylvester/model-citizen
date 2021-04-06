@@ -14,19 +14,19 @@ app.config.cacheBuster = {
 
 app.start({
   citizen: {
-    mode: 'debug',
+    mode          : 'development',
     http: {
-      hostname: '',
-      port: 8080
+      hostname    : '',
+      port        : 8080
     },
     cache: {
-      static: true
+      static      : true
     },
     compression: {
-      enable: true
+      enable      : true
     },
     layout: {
-      controller: '+_layout'
+      controller  : '+_layout'
     }
   }
 })

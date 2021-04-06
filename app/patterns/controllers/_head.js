@@ -3,17 +3,17 @@
 'use strict'
 
 module.exports = {
-  handler: handler
+  handler : handler
 }
 
 // default action
-async function handler(params, context, emitter) {
+async function handler(params) {
   let metaData = await app.models._head[params.route.controller]()
 
-  emitter.emit('ready', {
+  return {
     content: {
       metaData: metaData,
       tracking: app.config.citizen.mode === 'production' ? true : false
     }
-  })
+  }
 }

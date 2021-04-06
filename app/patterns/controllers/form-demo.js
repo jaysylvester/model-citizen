@@ -3,26 +3,24 @@
 'use strict'
 
 module.exports = {
-  handler: handler,
-  submit: submit
+  handler : handler,
+  submit  : submit
 }
 
 // default action
-function handler(params, context, emitter) {
-  emitter.emit('ready')
-}
+function handler() {}
 
-async function submit(params, context, emitter) {
+async function submit(params) {
   let processedForm = await app.models['form-demo'].validate(params.form)
 
   if ( processedForm.validated ) {
-    emitter.emit('ready', {
+    return {
       content: processedForm,
       view: 'confirmation'
-    })
+    }
   } else {
-    emitter.emit('ready', {
+    return {
       content: processedForm
-    })
+    }
   }
 }

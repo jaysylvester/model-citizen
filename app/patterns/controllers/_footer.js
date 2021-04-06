@@ -3,11 +3,11 @@
 'use strict'
 
 module.exports = {
-  handler: handler
+  handler : handler
 }
 
 // default action
-function handler(params, context, emitter) {
+function handler() {
   let copyrightDate = '2018',
       currentYear = new Date().getUTCFullYear()
 
@@ -15,9 +15,9 @@ function handler(params, context, emitter) {
     copyrightDate += '-' + currentYear
   }
 
-  emitter.emit('ready', {
+  return {
     content: {
       copyrightDate: copyrightDate
     }
-  })
+  }
 }
