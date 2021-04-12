@@ -19,7 +19,4 @@ module.exports = {
 }
 
 // default action
-// function handler() {}
-const handler = async (params) => {
-
-}
+function handler() {}
