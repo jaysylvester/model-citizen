@@ -17,6 +17,6 @@ See the [citizen documentation](https://github.com/jaysylvester/citizen) for det
 
 # Notes
 
-This template uses an [inline configuration](https://github.com/jaysylvester/citizen#inline-config) for simplicity, but a [configuration file](https://github.com/jaysylvester/citizen#config-files) is a more robust way to manage citizen across different environments.
+This template uses an [inline configuration](https://github.com/jaysylvester/citizen#inline-config) for simplicity, but a [configuration file](https://github.com/jaysylvester/citizen#configuration) is a more robust way to manage citizen across different environments.
 
 The included .gitignore excludes `app/config/*` to prevent potentially sensitive configuration options (database credentials, for example) being committed to a public repository.
