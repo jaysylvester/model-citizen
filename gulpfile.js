@@ -12,10 +12,14 @@ var autoprefixer  = require('autoprefixer'),
     uglify        = require('gulp-uglify-es').default
 
 gulp.task('css', function (done) {
-  gulp.src(['web/source/scss/baseline.scss', 'web/source/scss/global.scss', 'web/source/scss/**/**.scss'])
+  gulp.src([
+            'web/source/scss/baseline.scss',
+            'web/source/scss/global.scss',
+            'web/source/scss/**/**.scss'
+          ])
       .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
-      .pipe(postcss([autoprefixer({ browsers: 'last 2 versions' })]))
+      .pipe(postcss([autoprefixer()]))
       .pipe(cssnano({ safe: true, colormin: false }))
       .pipe(concat('site.css'))
       .pipe(sourcemaps.write('../min'))

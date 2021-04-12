@@ -1,6 +1,6 @@
 {
   "name": "model-citizen",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A responsive web site template built with citizen",
   "author": {
     "name": "Jay Sylvester",
@@ -18,6 +18,7 @@
   "devDependencies": {
     "autoprefixer": "*",
     "cssnano": "*",
+    "eslint": "*",
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-cssnano": "*",
@@ -27,7 +28,8 @@
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify-es": "*",
-    "gulp-watch": "*"
+    "gulp-watch": "*",
+    "postcss": "*"
   },
   "engines": {
     "node": ">= 12.9.0"
