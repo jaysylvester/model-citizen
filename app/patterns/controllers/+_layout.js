@@ -1,14 +1,11 @@
 // +_layout controller
 
-'use strict'
-
-module.exports = {
-  handler : handler
-}
-
 // default action
-function handler() {
+export const handler = () => {
   return {
+    public: {
+      browsersyncEnabled: app.config.citizen.mode === 'development' ? true : false
+    },
     include: {
       head: {
         controller: '_head'

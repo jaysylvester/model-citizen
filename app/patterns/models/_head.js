@@ -1,15 +1,8 @@
 // _head model
 
-'use strict'
-
-module.exports = {
-  index: index,
-  'form-demo': formDemo
-}
-
-async function index() {
-  // Not really necessary in this case, but if this were pulling from a database, you'd want to use await here.
-  const metaData = await function () {
+// Not really necessary in this case, but if this were pulling from a database, you'd want to use async/await here.
+export const index = () => {
+  const metaData = function () {
     return {
       title:       'Index Title',
       description: 'Index description',
@@ -20,8 +13,8 @@ async function index() {
   return metaData
 }
 
-async function formDemo() {
-  // Not really necessary in this case, but if this were pulling from a database, you'd want to use await here.
+// Not really necessary in this case, but if this were pulling from a database, you'd want to use async/await here.
+export const formDemo = async () => {
   const metaData = await function () {
     return {
       title:        'citizen form demo',

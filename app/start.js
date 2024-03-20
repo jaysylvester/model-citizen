@@ -1,23 +1,26 @@
 // app start
 
-'use strict'
+// node
+import fs      from 'fs'
+import path    from 'path'
+// third party
+import citizen from 'citizen'
 
-global.app = require('citizen')
+global.app = citizen
 
 // Get static file last modified times to populate cache buster variables
-const fs = require('fs'),
-      path = require('path')
-app.config.cacheBuster = {
-  css: fs.statSync(path.resolve(__dirname, '../web/min/site.css')).mtime.toString().replace(/[ :\-()]/g, ''),
-  js:  fs.statSync(path.resolve(__dirname, '../web/min/site.js')).mtime.toString().replace(/[ :\-()]/g, '')
+let cacheBuster = {
+  css: fs.statSync(path.resolve(app.config.citizen.directories.app, '../web/min/site.css')).mtime.toString().replace(/[ :\-()]/g, ''),
+  js:  fs.statSync(path.resolve(app.config.citizen.directories.app, '../web/min/site.js')).mtime.toString().replace(/[ :\-()]/g, '')
 }
 
-app.start({
+app.server.start({
+  // citizen configuration, which you can put here or in /app/config/
   citizen: {
     mode          : 'development',
     http: {
       hostname    : '',
-      port        : 8080
+      port        : 3000
     },
     cache: {
       static      : true
@@ -28,5 +31,8 @@ app.start({
     layout: {
       controller  : '+_layout'
     }
-  }
+  },
+  // application configuration
+  cacheBuster     : cacheBuster,
+  siteName        : 'Model Citizen'
 })

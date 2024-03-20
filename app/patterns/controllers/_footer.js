@@ -1,23 +1,10 @@
-// _header controller
-
-'use strict'
-
-module.exports = {
-  handler : handler
-}
+// _footer controller
 
 // default action
-function handler() {
-  let copyrightDate = '2018',
-      currentYear = new Date().getUTCFullYear()
-
-  if ( currentYear > copyrightDate ) {
-    copyrightDate += '-' + currentYear
-  }
-
+export const handler = () => {
   return {
-    content: {
-      copyrightDate: copyrightDate
+    public: {
+      copyrightDate: new Date().getUTCFullYear()
     }
   }
 }

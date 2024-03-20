@@ -2,7 +2,8 @@
   {{#if error}}
     <p class="error">{{error}}</p>
   {{/if}}
-  <form action="/form-demo/action/submit" method="post">
+  <!-- Submitting the form will call the submit action in the formDemo controller -->
+  <form action="/formDemo/action/submit" method="post">
     <ul class="data">
       <li>
         <label for="first-name">First name</label>

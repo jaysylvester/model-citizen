@@ -1,13 +1,6 @@
-// form-demo model
+// formDemo model
 
-'use strict'
-
-module.exports = {
-  validate : validate
-}
-
-
-function validate(form) {
+export const validate = (form) => {
   if ( !form.first_name || !form.last_name ) {
     return {
       validated : false,
