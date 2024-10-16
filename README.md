@@ -1,3 +1,9 @@
+# Outdated, do not use
+
+model-citizen hasn't been updated to align with the latest version of [citizen](https://github.com/jaysylvester/citizen) and doesn't serve as a valid reference or example of a citizen application. Do not use until updated.
+
+Original readme:
+
 This is a responsive web site template built with [citizen](https://github.com/jaysylvester/citizen), including a basic Gulp and Sass build. Feel free to overengineer and overcomplicate as your ego and/or manager requires.
 
 # Instructions
